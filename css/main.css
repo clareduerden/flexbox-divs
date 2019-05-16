@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #FFF;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -23,21 +23,17 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 /*
  * A better looking default horizontal rule
  */
-
 hr {
     display: block;
     height: 1px;
@@ -46,13 +42,11 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-
 audio,
 canvas,
 iframe,
@@ -61,47 +55,37 @@ svg,
 video {
     vertical-align: middle;
 }
-
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
-
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
     resize: vertical;
 }
-
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
-
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
 }
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
 html {
   background-color: #f16059;
   height: 100%;
   width: 100%;
 }
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
@@ -110,33 +94,53 @@ body {
   height: 100%;
 }
 
+/* ------- SET UP FLEXBOX LAYOUT --------- */
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
 }
-
+header, footer, main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+main {
+  border-bottom: 2px solid #fff;
+}
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.4em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
-  padding: 20px;
   width: 30%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  text-align: center;
+  line-height: 1.6em;
+  font-size: 1.4em;
+  height: 300px;
+  padding-bottom: 1em;
 }
-.div-2 {
-  border-left: 1px groove #fff;
+.right-border {
   border-right: 1px groove #fff;
+  padding-right: 1em;
 }
-
-
+/* -----STYLE THE TEXT FONTS ICONS ETC ------- */
+footer ul {
+  padding-inline-start: 0;
+}
+footer ul li {
+  display: inline-block;
+}
+.fa-github {
+  color: #FFF;
+}
+header h1 {
+  font-size: 4em;
+  font-family: 'Lora';
+}
+main h2 {
+  font-size: 2em;
+}
 
 
 /* ==========================================================================
@@ -224,6 +228,19 @@ body {
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
+}
+
+/* -------ALL DIVS TAKE UP 100% ON MOBILES---------- */
+@media screen and (max-width:768px) {
+  .div-1, .div-2, .div-3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 1.6em;
+    font-size: 1.4em;
+    height: 300px;
+    padding-bottom: 1em;
+  }
 }
 
 /* ==========================================================================
